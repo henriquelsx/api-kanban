@@ -1,8 +1,10 @@
-import { Pool } from 'pg';
+import pg from 'pg';
+const { Pool } = pg;
 import dotenv from 'dotenv';
 
 dotenv.config();
 
+// Configuração do Pool de Conexões
 export const pool = new Pool({
   host: process.env.DB_HOST,
   port: Number(process.env.DB_PORT),
@@ -11,11 +13,18 @@ export const pool = new Pool({
   database: process.env.DB_NAME,
 });
 
-// Teste de conexão
-pool.query('SELECT NOW()', (err, res) => {
-  if (err) {
-    console.error('Erro ao conectar no banco:', err);
-  } else {
-    console.log('Banco de dados conectado com sucesso!');
+//Função para validar a conexão com o banco de dados.
+//Essencial para o ciclo de vida da aplicação.
+
+export const testConnection = async () => {
+  try {
+    const client = await pool.connect();
+    const res = await client.query('SELECT NOW()');
+    console.log('✅ Banco de dados conectado com sucesso! (Timestamp:', res.rows[0].now, ')');
+    client.release(); // Libera o cliente de volta para o pool
+  } catch (err) {
+    console.error('❌ Erro crítico ao conectar no banco de dados:', err);
+    // Em um ambiente de produção/DevOps, aqui você poderia disparar um alerta
+    // ou decidir se a aplicação deve continuar rodando.
   }
-});
+};
