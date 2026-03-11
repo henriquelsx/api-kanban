@@ -15,13 +15,20 @@ export const createUser = async (req: Request, res: Response) => {
     const validatedData = userSchema.parse(req.body);   
     const newUser = await userService.create(validatedData);
     return res.status(201).json(newUser);
+
 } catch (error: any) {
-  if (error instanceof z.ZodError) {
+    if (error instanceof z.ZodError) {
+      return res.status(400).json({ 
+        message: "Dados de entrada inválidos",
+        errors: error.issues 
+      });
+    }
     
-    return res.status(400).json({ errors: error.issues });
+    // ADICIONE ESTA LINHA AQUI EMBAIXO:
+    console.error("❌ Erro no Controller:", error); 
+    
+    return res.status(500).json({ error: "Erro interno" });
   }
-  return res.status(500).json({ error: "Erro interno" });
-}
 };
 
 export const getAllUsers = async (_req: Request, res: Response) => {
