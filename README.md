@@ -182,3 +182,9 @@ Isso permite que o **Controller responda com o estado atualizado do banco imedia
 - [x] README completo e instrutivo  
 - [x] Projeto executável via Docker  
 - [x] Endpoint de movimentação de cards validado de ponta a ponta
+
+---
+
+<img width="1809" height="407" alt="diagram-export-11-03-2026-17_18_10" src="https://github.com/user-attachments/assets/45dc174c-7291-4306-9550-f1672a95dbc8" />
+
+
