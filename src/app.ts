@@ -10,15 +10,15 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-// Inicia o teste de conexão com o Postgres assim que o servidor sobe
+// Teste de conexão com o Postgres
 testConnection();
 
-// Rota de Health Check (Essencial para monitoramento e Docker)
+//Health Check
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
-// Centraliza todas as rotas da aplicação sob o prefixo /api
+// Rotas de saída da api /api
 app.use('/api', apiRouter);
 
 app.listen(PORT, () => {
