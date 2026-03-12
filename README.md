@@ -1,10 +1,10 @@
-# 📋 Kanban API - Desafio Técnico
+#  Kanban API - Desafio Técnico
 
 API para gerenciamento de quadros Kanban, desenvolvida com foco em **performance**, **tipagem estrita** e **integridade de dados** utilizando **Node.js**, **TypeScript** e **PostgreSQL**.
 
 ---
 
-# 🚀 Como Executar o Projeto
+#  Como Executar o Projeto
 
 ## 1. Clonar o repositório
 
@@ -135,7 +135,7 @@ Adicionaria **logs estruturados** e **métricas de tempo de resposta**.
 
 ---
 
-# 🤖 2. Uso de Inteligência Artificial
+#  2. Uso de Inteligência Artificial
 
 Este projeto contou com o suporte técnico do **Gemini (Google)** como único colaborador de IA.
 
@@ -175,7 +175,7 @@ RETURNING *
 Isso permite que o **Controller responda com o estado atualizado do banco imediatamente após a movimentação de um card**.
 
 ---
-## 🧪 Testes Unitários
+##  Testes Unitários
 
 O projeto utiliza **Vitest** para garantir a integridade das regras de negócio e validação de dados. 
 
