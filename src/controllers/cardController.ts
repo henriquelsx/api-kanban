@@ -35,12 +35,9 @@ export const createCard = async (req: Request, res: Response) => {
 
 export const moveCard = async (req: Request, res: Response) => {
   try {
-    // Corrigindo o erro de tipagem: forçamos o id a ser tratado como string antes do parseInt
-    const cardId = parseInt(req.params.id as string);
     
-    // Validamos se a nova coluna enviada no body está correta
+    const cardId = parseInt(req.params.id as string);
     const { column_id } = moveCardSchema.parse(req.body);
-
     const updatedCard = await cardService.updateColumn(cardId, column_id);
     
     if (!updatedCard) {
