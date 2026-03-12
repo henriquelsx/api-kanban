@@ -122,7 +122,7 @@ A solução adotada foi migrar para **tsx**, que possui suporte nativo a ESM e o
 
 ---
 
-# O que eu faria diferente com mais tempo
+# O que pode ainda ser implementado no projeto
 
 ### Autenticação
 Implementaria **proteção de rotas com JWT**.
