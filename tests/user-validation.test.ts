@@ -3,7 +3,7 @@ import { userSchema } from '../src/schemas/user.schema.js';
 
 describe('User Schema Validation', () => {
   it('deve passar com dados válidos', () => {
-    const data = { name: 'Henrique', email: 'devops@teste.com', phone: '11999998888' };
+    const data = { name: 'Henrique', email: 'devops@teste.com', phone: '11999998888' };//ex
     expect(() => userSchema.parse(data)).not.toThrow();
   });
 
