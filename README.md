@@ -175,6 +175,19 @@ RETURNING *
 Isso permite que o **Controller responda com o estado atualizado do banco imediatamente após a movimentação de um card**.
 
 ---
+## 🧪 Testes Unitários
+
+O projeto utiliza **Vitest** para garantir a integridade das regras de negócio e validação de dados. 
+
+### O que é testado?
+- **Schemas de Validação (Zod):** Garante que e-mails, nomes e IDs sigam o formato correto.
+- **Regras de Movimentação:** Valida se a lógica de transição entre colunas respeita os tipos de dados esperados.
+
+### Como rodar os testes
+Para executar a suíte de testes unitários:
+```bash
+npm test
+```
 
 # ✅ Checklist de Entrega
 
