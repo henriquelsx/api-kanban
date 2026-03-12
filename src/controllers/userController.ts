@@ -24,8 +24,8 @@ export const createUser = async (req: Request, res: Response) => {
       });
     }
     
-    // ADICIONE ESTA LINHA AQUI EMBAIXO:
-    console.error("❌ Erro no Controller:", error); 
+  
+    //console.error("❌ Erro no Controller:", error); 
     
     return res.status(500).json({ error: "Erro interno" });
   }
