@@ -1,6 +1,6 @@
 #  Kanban API - Desafio Técnico
 
-API para gerenciamento de quadros Kanban, desenvolvida com foco em **performance**, **tipagem estrita** e **integridade de dados** utilizando **Node.js**, **TypeScript** e **PostgreSQL**.
+API para gerenciamento de quadros Kanban utilizando **Node.js**, **TypeScript** e **PostgreSQL**.
 
 ---
 
